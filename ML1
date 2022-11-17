@@ -1,0 +1,22 @@
+#to get current directory
+import os
+os.getcwd() 
+
+import pandas as pd
+df = pd.read_csv("Heart.csv")
+df.head() #screenshot of table
+print(df) #screenshot of table
+# for shape i.e no. of rows & columns (303, 15)
+shape=df.shape
+print(shape) 
+print(df.isnull())  #for finding missing values
+print(df.isnull().sum()) #for finding missing values in summary
+#for finding datatypes
+print(df.dtypes)  
+#for finding out zero'set()
+print((df==0).sum()) 
+# for finding mean
+print(df['Age'].mean())  
+# for finding exact values
+new_df = df.filter(['Age','Sex','ChestPain','RestBP','Chol'])
+print(new_df)  
